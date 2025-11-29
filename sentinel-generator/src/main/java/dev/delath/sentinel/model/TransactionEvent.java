@@ -1,4 +1,4 @@
-package dev.delath.sentinel.events;
+package dev.delath.sentinel.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
