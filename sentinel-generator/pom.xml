@@ -123,7 +123,7 @@
                 <configuration>
                     <java>
                         <palantirJavaFormat>
-                            <style>PALANTIR</style>                       <!-- or AOSP/GOOGLE (optional) -->
+                            <style>PALANTIR</style>
                         </palantirJavaFormat>
                         <removeUnusedImports />
                     </java>
