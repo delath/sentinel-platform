@@ -4,7 +4,11 @@ import dev.delath.sentinel.domain.Transaction;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
 import java.time.Instant;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Random;
 import net.datafaker.Faker;
 import net.datafaker.providers.base.Finance;
 
