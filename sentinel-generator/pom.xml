@@ -122,10 +122,9 @@
                 <version>3.1.0</version>
                 <configuration>
                     <java>
-                        <googleJavaFormat>
-                            <style>GOOGLE</style>
-                            <reflowLongStrings>true</reflowLongStrings>
-                        </googleJavaFormat>
+                        <palantirJavaFormat>
+                            <style>PALANTIR</style>                       <!-- or AOSP/GOOGLE (optional) -->
+                        </palantirJavaFormat>
                         <removeUnusedImports />
                     </java>
                 </configuration>

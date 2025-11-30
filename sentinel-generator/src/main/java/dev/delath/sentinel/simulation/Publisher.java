@@ -11,20 +11,21 @@ import org.jboss.logging.Logger;
 @ApplicationScoped
 public class Publisher {
 
-  private static final Logger LOG = Logger.getLogger(Publisher.class);
+    private static final Logger LOG = Logger.getLogger(Publisher.class);
 
-  @Inject Generator generator;
+    @Inject
+    Generator generator;
 
-  @Inject
-  @Channel("generated-transactions")
-  Emitter<Transaction> eventEmitter;
+    @Inject
+    @Channel("generated-transactions")
+    Emitter<Transaction> eventEmitter;
 
-  @Scheduled(every = "500ms")
-  public void publish() {
-    var transaction = generator.next();
+    @Scheduled(every = "500ms")
+    public void publish() {
+        var transaction = generator.next();
 
-    eventEmitter.send(transaction);
+        eventEmitter.send(transaction);
 
-    LOG.infof("Sentinel: Emitted transaction %s", transaction.transactionId());
-  }
+        LOG.infof("Sentinel: Emitted transaction %s", transaction.transactionId());
+    }
 }
